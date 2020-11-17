@@ -62,16 +62,17 @@ public class Game {
 
     public String codeWordToGuess(String wordToGuess, char letterToShow) {
 
-        StringBuilder stringBuilder = new StringBuilder();
+
+        StringBuilder stringBuilderr = new StringBuilder();
 
         for (int i = 0; i < wordToGuess.length(); i++) {
             if (wordToGuess.charAt(i) == letterToShow) {
-                stringBuilder.append(letterToShow);
+                stringBuilderr.append(letterToShow);
             } else {
-                stringBuilder.append("*");
+                stringBuilderr.append("*");
             }
         }
-        return stringBuilder.toString();
+        return stringBuilderr.toString();
     }
 
 //    public String codeWordToGuess(String wordToGuess, char letterToShow) {
