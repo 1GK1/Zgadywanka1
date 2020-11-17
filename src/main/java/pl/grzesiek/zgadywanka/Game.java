@@ -62,7 +62,7 @@ public class Game {
 
     public String codeWordToGuessNew(String wordToGuess, char letterToShow) {
         StringBuilder stringBuilder = new StringBuilder();
-
+        int pdone = 1;
         for (int i = 0; i < wordToGuess.length(); i++) {
             if (wordToGuess.charAt(i) == letterToShow) {
                 stringBuilder.append(letterToShow);
