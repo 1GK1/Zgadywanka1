@@ -61,8 +61,6 @@ public class Game {
     }
 
     public String codeWordToGuess(String wordToGuess, char letterToShow) {
-
-
         StringBuilder stringBuilderr = new StringBuilder();
 
         for (int i = 0; i < wordToGuess.length(); i++) {
