@@ -142,7 +142,7 @@ class GameTest {
     @Test
     public void codeWordToGuess_Show3Letters_ReturnCodedWordWith3LettersExposed() {
         String expectedResult = "p*p*p***";
-        String result = game.testingOnly("papapooa", 'p');
+        String result = game.codeWordToGuessNew("papapooa", 'p');
         assertTrue(expectedResult.length() == result.length());
         assertEquals(expectedResult, result);
     }
@@ -150,7 +150,7 @@ class GameTest {
     @Test
     public void codeWordToGuess_Show1Letter_ReturnCodedWordWith1LetterExposed() {
         String expectedResult = "m*********";
-        String result = game.testingOnly("montenegro", 'm');
+        String result = game.codeWordToGuessNew("montenegro", 'm');
         assertTrue(expectedResult.length() == result.length());
         assertEquals(expectedResult, result);
     }

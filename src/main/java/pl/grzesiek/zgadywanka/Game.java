@@ -60,7 +60,7 @@ public class Game {
         return wordToGuess;
     }
 
-    public String testingOnly(String wordToGuess, char letterToShow) {
+    public String codeWordToGuessNew(String wordToGuess, char letterToShow) {
         StringBuilder stringBuilderr = new StringBuilder();
 
         for (int i = 0; i < wordToGuess.length(); i++) {
@@ -87,7 +87,7 @@ public class Game {
 
     public void start() {
         wordToGuess = prepareWordToGuess();
-        codedWord = testingOnly(wordToGuess, letterToShow);
+        codedWord = codeWordToGuessNew(wordToGuess, letterToShow);
 
         numberOfAttempts = (int) (wordToGuess.length() * 1.5);
         System.out.printf(
