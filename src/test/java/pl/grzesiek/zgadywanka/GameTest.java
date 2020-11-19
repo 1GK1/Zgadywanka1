@@ -155,6 +155,14 @@ class GameTest {
         assertEquals(expectedResult, result);
     }
 
+    @Test
+    public void codeWordToGuess_Show2Letter_ReturnCodedWordWith1LetterExposed() {
+        String expectedResult = "m********m";
+        String result = game.codeWordToGuessNew("montenegrm", 'm');
+        assertTrue(expectedResult.length() == result.length());
+        assertEquals(expectedResult, result);
+    }
+
 
 //    MethodName_StateUnderTest_ExpectedBehavior
 
