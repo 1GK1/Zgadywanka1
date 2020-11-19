@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Game {
     private final FileReader reader;
@@ -61,17 +62,11 @@ public class Game {
     }
 
     public String codeWordToGuessNew(String wordToGuess, char letterToShow) {
-        StringBuilder stringBuilder = new StringBuilder();
-        int pdone = 1;
-        int pdone1 = 2;
-        for (int i = 0; i < wordToGuess.length(); i++) {
-            if (wordToGuess.charAt(i) == letterToShow) {
-                stringBuilder.append(letterToShow);
-            } else {
-                stringBuilder.append("*");
-            }
-        }
-        return stringBuilder.toString();
+        return wordToGuess.codePoints()
+                .mapToObj(letter ->
+                        letter == letterToShow ?
+                                String.valueOf(letterToShow) : "*")
+                .collect(Collectors.joining());
     }
 
 //    public String codeWordToGuess(String wordToGuess, char letterToShow) {
