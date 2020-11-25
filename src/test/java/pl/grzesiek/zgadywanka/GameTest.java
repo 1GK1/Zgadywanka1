@@ -7,7 +7,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-//import org.junit.jupiter.api.Test;
+//import org.junit.jupiter.api.GameTest;
 
 public class GameTest {
 
@@ -22,7 +22,7 @@ public class GameTest {
         game = new Game();
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void checkUserAnswer_CorrectLetter_ReturnDecodedWordToGuess() {
         String exceptedResult = "a*********";
         String result = game.checkUserAnswer("automobile", "**********", 'a');
@@ -38,7 +38,7 @@ public class GameTest {
     }
 
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void checkUserAnswer_MultiCorrectLetters_ReturnDecodedWordToGuess() {
         String exceptedResult = "***o*o****";
         String result = game.checkUserAnswer("automobile", "**********", 'o');
@@ -46,7 +46,7 @@ public class GameTest {
     }
 
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void checkUserAnswer_IncorrectLetter_ReturnUncodedWordToGuess() {
         String exceptedResult = "**********";
         String result = game.checkUserAnswer("automobile", "**********", 'x');
@@ -54,7 +54,7 @@ public class GameTest {
     }
 
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void codeWordToGuess_Show3Letters_ReturnCodedWordWith3LettersExposed() {
         String expectedResult = "p*p*p***";
         String result = game.codeWordToGuessNew("papapooa", 'p');
@@ -62,7 +62,7 @@ public class GameTest {
         assertEquals(expectedResult, result);
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void codeWordToGuess_Show1Letter_ReturnCodedWordWith1LetterExposed() {
         String expectedResult = "m*********";
         String result = game.codeWordToGuessNew("montenegro", 'm');
@@ -70,7 +70,7 @@ public class GameTest {
         assertEquals(expectedResult, result);
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void codeWordToGuess_Show2Letter_ReturnCodedWordWith1LetterExposed() {
         String expectedResult = "m********m";
         String result = game.codeWordToGuessNew("montenegrm", 'm');
